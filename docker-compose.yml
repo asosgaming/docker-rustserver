@@ -16,7 +16,7 @@ Rust:
     - RUST_SERVER_SEED="123456"
     - RUST_SERVER_NAME="ASoS_Gaming_Rust_Docker"
     - RUST_SERVER_DESCRIPTION="Test Docker Server"
-    - RUST_RCON_PASSWORD=Car08Ram
+    - RUST_RCON_PASSWORD=password
     - RUST_SERVER_WORLDSI="3500"
     - RUST_SERVER_MAXPLAYERS="12"
     - RUST_SERVER_URL="http://www.asosgaming.com"

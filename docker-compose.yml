@@ -1,0 +1,31 @@
+Rust:
+  restart: always
+  image: didstopia/rust-server:latest
+  container_name: rust-dedicated
+  ports:
+    - "28015:28015/udp"
+    - "28015:28015"
+    - "28016:28016"
+    - "9000:8080"
+  volumes:
+    - /storage/rust:/steamcmd/rust
+
+  environment:
+    - RUST_SERVER_STARTUP_ARGUMENTS="-batchmode -load -logfile /dev/stdout +server.secure 1"
+    - RUST_SERVER_IDENTITY="ASoSGaming"
+    - RUST_SERVER_SEED="123456"
+    - RUST_SERVER_NAME="ASoS_Gaming_Rust_Docker"
+    - RUST_SERVER_DESCRIPTION="Test Docker Server"
+    - RUST_RCON_PASSWORD=Car08Ram
+    - RUST_SERVER_WORLDSI="3500"
+    - RUST_SERVER_MAXPLAYERS="12"
+    - RUST_SERVER_URL="http://www.asosgaming.com"
+    - RUST_SERVER_SAVE_INTERVAL="600"
+    - RUST_RCON_WEB="1"
+    - RUST_RCON_PORT="28016"
+    - RUST_BRANCH="-beta prerelease"
+    - RUST_UPDATE_CHECKING="1"
+    - RUST_UPDATE_BRANCH="pre-repease"
+    - RUST_START_MODE"0"
+    - RUST_OXIDE_ENABLED="1"
+    - RUST_OXIDE_UPDATE_ON_BOOT="1"

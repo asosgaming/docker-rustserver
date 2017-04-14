@@ -6,7 +6,11 @@ MAINTAINER didstopia
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 
-RUN /usr/sbin/locale-gen en_US.UTF-8
+
+RUN apt-get clean && apt-get update && apt-get install -y \
+    locales \
+    apt-utils \
+    tzdata && locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 
 RUN echo "America/New_York" > /etc/timezone && dpkg-reconfigure tzdata

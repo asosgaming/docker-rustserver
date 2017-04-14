@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker tag didstopia/rust-server:latest didstopia/rust-server:latest
-docker push didstopia/rust-server:latest
+docker tag asos/docker-rustserver:latest asos/docker-rustserver:latest
+docker push asos/docker-rustserver:latest

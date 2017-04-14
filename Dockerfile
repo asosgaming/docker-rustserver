@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER didstopia
+MAINTAINER ASoS Gaming
 
 # Set correct environment variables.
 ENV DEBIAN_FRONTEND noninteractive
@@ -107,7 +107,7 @@ ENV RUST_SERVER_IDENTITY "docker"
 ENV RUST_SERVER_SEED "12345"
 ENV RUST_SERVER_NAME "Rust Server [DOCKER]"
 ENV RUST_SERVER_DESCRIPTION "This is a Rust server running inside a Docker container!"
-ENV RUST_SERVER_URL "https://hub.docker.com/r/didstopia/rust-server/"
+ENV RUST_SERVER_URL "https://hub.docker.com/r/asosgaming/docker-rustserver/"
 ENV RUST_SERVER_BANNER_URL ""
 ENV RUST_RCON_WEB "1"
 ENV RUST_RCON_PORT "28016"

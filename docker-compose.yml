@@ -1,6 +1,6 @@
 Rust:
   restart: always
-  image: didstopia/rust-server:latest
+  image: asos/docker-rustserver:latest
   container_name: rust-dedicated
   ports:
     - "28015:28015/udp"

@@ -21,7 +21,7 @@ exit_handler()
 			cp -fr "/steamcmd/rust/server/$RUST_SERVER_IDENTITY/xp*.db" "/steamcmd/rust/bak/"
 		fi
 	fi
-	
+
 	# Execute the RCON shutdown command
 	node /shutdown_app/app.js
 	sleep 1
@@ -99,7 +99,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/steamcmd/rust/RustDedicated_Data/Plugin
 if [ "$RUST_OXIDE_ENABLED" = "1" ]; then
 	# Next check if Oxide doesn't' exist, or if we want to always update it
 	INSTALL_OXIDE="0"
-	if [ ! -f "/steamcmd/rust/CSharpCompiler" ]; then
+	if [ ! -f "/steamcmd/rust/CSharpCompiler.X86_64" ]; then
 		INSTALL_OXIDE="1"
 	fi
 	if [ "$RUST_OXIDE_UPDATE_ON_BOOT" = "1" ]; then
@@ -110,7 +110,7 @@ if [ "$RUST_OXIDE_ENABLED" = "1" ]; then
 	if [ "$INSTALL_OXIDE" = "1" ]; then
 		echo "Downloading and installing latest Oxide.."
 		curl -sL https://dl.bintray.com/oxidemod/builds/Oxide-Rust.zip | bsdtar -xvf- -C /steamcmd/rust/
-		chmod +x /steamcmd/rust/CSharpCompiler && chmod +x /steamcmd/rust/CSharpCompiler.x86
+		chmod +x /steamcmd/rust/CSharpCompiler && chmod +x /steamcmd/rust/CSharpCompiler.x86_x64
 		chown -R root:root /steamcmd/rust
 	fi
 fi

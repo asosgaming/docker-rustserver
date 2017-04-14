@@ -3,10 +3,10 @@ FROM ubuntu:16.04
 MAINTAINER didstopia
 
 # Setup the locales
-RUN locale-gen en_US.UTF-8  
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en  
-ENV LC_ALL en_US.UTF-8 
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 
 # Fixes apt-get warnings
 ENV DEBIAN_FRONTEND noninteractive
@@ -22,8 +22,13 @@ RUN apt-get install -y \
     lib32gcc1 \
     libstdc++6 \
     curl \
+    php \
+    php-curl \
+    nano \
     wget \
     bsdtar \
+    zip \
+    unzip \
     nginx \
     build-essential \
     expect \

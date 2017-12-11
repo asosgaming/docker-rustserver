@@ -58,5 +58,9 @@ To use it, simply run the following on the host: `docker exec rust-server rcon s
 
 # Anything else
 
-If you need help, have questions or bug submissions, feel free to contact me **@Dids** on Twitter, and on the *Rust Server Owners* Slack community.
+--------
+UPDATES
 
+11 December 2017
+--------
+If you need help, have questions or bug submissions, feel free to contact me **@Dids** on Twitter, and on the *Rust Server Owners* Slack community.

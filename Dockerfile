@@ -59,6 +59,9 @@ ADD fix_conn.sh /tmp/fix_conn.sh
 RUN mkdir -p /steamcmd/rust
 VOLUME ["/steamcmd/rust"]
 
+# Install ocomposer  (specific commit)
+RUN curl -s https://raw.githubusercontent.com/tetreum/ocomposer/master/compiled/installer | bash \
+
 # Install NodeJS (see below)
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
